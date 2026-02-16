@@ -1767,11 +1767,13 @@ svg.tech-logo-small {
 /* Tree Lines (SVG) */
 .tree-lines-container {
   width: 90%;
-  height: 60px;
+  height: 80px;
+  /* Increased from 60px */
   display: flex;
   justify-content: center;
   position: relative;
-  margin: 5px 0;
+  margin: 10px 0;
+  /* Increased margin */
 }
 
 .tree-svg {
@@ -1851,8 +1853,10 @@ svg.tech-logo-small {
 
 /* Compact Shared Source */
 .source-node {
-  padding: 8px 16px;
-  margin-bottom: 0;
+  padding: 10px 20px;
+  /* Slightly more padding */
+  margin-bottom: 20px;
+  /* Added margin for separation */
 }
 
 .source-node .source-logo {
