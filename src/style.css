@@ -1,0 +1,1899 @@
+/* Global Theme */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root {
+  --bg-dark: #0f0c29;
+  --bg-gradient-start: #0f0c29;
+  --bg-gradient-mid: #302b63;
+  --bg-gradient-end: #24243e;
+
+  --accent-color: #3DDC84;
+  /* Android Green */
+  --accent-secondary: #61dafb;
+  /* React Blue */
+  --accent-purple: #bb86fc;
+  --text-main: #ffffff;
+  --text-muted: #a0a0a0;
+
+  --ios-color: #007aff;
+  --android-color: #3DDC84;
+  --flutter-color: #02569B;
+
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+  --shadow-glow: 0 0 20px rgba(61, 220, 132, 0.3);
+}
+
+body {
+  background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-mid), var(--bg-gradient-end));
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+.reveal .slides {
+  text-align: left;
+  /* Default left alignment */
+}
+
+/* Typography Overrides */
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4 {
+  font-family: 'Inter', sans-serif;
+  text-transform: none;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.reveal p,
+.reveal li {
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.reveal code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Background Animation Placeholder */
+.background-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(48, 43, 99, 0.4), transparent 70%);
+  z-index: -2;
+  animation: pulse-bg 10s infinite alternate;
+}
+
+@keyframes pulse-bg {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+/* Floating Grid */
+.floating-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  perspective: 1000px;
+  transform: rotateX(60deg) scale(2);
+  transform-origin: top;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+/* MODULE 1: HERO */
+.slide-opening .content-wrapper {
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.module-title {
+  color: var(--accent-purple);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.main-title {
+  font-size: 4rem;
+  background: -webkit-linear-gradient(45deg, #fff, #a0aec0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+}
+
+.highlight-year {
+  color: var(--accent-color);
+  -webkit-text-fill-color: var(--accent-color);
+}
+
+.typewriter-container {
+  display: inline-block;
+  overflow: hidden;
+  border-right: .15em solid var(--accent-color);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: var(--accent-color);
+  }
+}
+
+/* Floating Elements (3D Mockups) */
+.floating-elements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.icon-3d {
+  position: absolute;
+  font-size: 4rem;
+  animation: float 6s ease-in-out infinite;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.phone-mockup {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+  transform: rotate(-15deg);
+}
+
+.code-brackets {
+  top: 30%;
+  right: 15%;
+  animation-delay: 2s;
+  transform: rotate(15deg);
+  color: var(--accent-secondary);
+}
+
+.cloud-icon {
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 4s;
+  opacity: 0.6;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+/* SECTION 1: DEFINITION */
+.split-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.split-side {
+  text-align: center;
+  flex: 1;
+  padding: 20px;
+  border: 1px solid transparent;
+  transition: all 0.3s;
+}
+
+.split-side:hover {
+  background: var(--card-bg);
+  border: var(--glass-border);
+  border-radius: 12px;
+}
+
+.icon-large {
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+
+.divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-muted);
+  height: 100%;
+  justify-content: center;
+}
+
+.line {
+  height: 80px;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.5));
+}
+
+.line:last-child {
+  background: linear-gradient(to top, transparent, rgba(255, 255, 255, 0.5));
+}
+
+.vs-circle {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  z-index: 2;
+  margin: 10px 0;
+  font-size: 1.2rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* SECTION 2: NATIVE */
+.os-comparison {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 50px;
+}
+
+.os-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+  width: 250px;
+  transition: transform 0.3s;
+}
+
+.os-card:hover {
+  transform: translateY(-10px);
+}
+
+.glow-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(50px);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.glow-effect.green {
+  background: var(--android-color);
+}
+
+.glow-effect.blue {
+  background: var(--ios-color);
+}
+
+.os-logo {
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.filter-white {
+  filter: brightness(0) invert(1);
+}
+
+/* ANDROID & IOS DEV SLIDES */
+.header-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.icon-box {
+  font-size: 3rem;
+}
+
+.col-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.info-card {
+  background: var(--card-bg);
+  border: var(--glass-border);
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.info-card h4 {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 5px;
+}
+
+.info-card p {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.highlight-kotlin {
+  color: #F18E33;
+}
+
+.highlight-compose {
+  color: #4285F4;
+}
+
+.dimmed {
+  opacity: 0.5;
+  font-size: 0.9rem;
+}
+
+.ide-mockup {
+  background: #1E1E1E;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  border: 1px solid #333;
+}
+
+.window-header {
+  background: #2D2D2D;
+  padding: 8px 15px;
+  color: #aaa;
+  font-size: 0.7rem;
+}
+
+.code-content {
+  padding: 20px;
+  color: #D4D4D4;
+}
+
+.bottom-alert {
+  margin-top: 30px;
+  background: rgba(61, 220, 132, 0.1);
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* SDK */
+.blueprint-diagram {
+  margin: 40px auto;
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  padding: 40px;
+  width: fit-content;
+  border-radius: 10px;
+}
+
+.sdk-box {
+  border: 2px solid var(--text-main);
+  padding: 20px;
+  display: inline-block;
+}
+
+.components-grid {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.comp {
+  background: var(--card-bg);
+  padding: 10px;
+  border: 1px solid #fff;
+  font-size: 0.8rem;
+}
+
+/* SLIDE 6: iOS (White Theme override) */
+.slide-ios-dev.white-theme {
+  position: relative;
+  /* Ensure non-empty ruleset */
+  /* Only overrides specific containers if needed, reveal handles white text well on dark bg. */
+}
+
+.glass-cards-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  flex: 1;
+  text-align: center;
+}
+
+/* CROSS PLATFORM ANIMATIONS */
+.flow-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.code-source {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #333;
+}
+
+.arrows {
+  font-size: 2rem;
+}
+
+.targets {
+  display: flex;
+  gap: 50px;
+}
+
+.target {
+  background: var(--card-bg);
+  padding: 15px 30px;
+  border-radius: 50px;
+  border: 1px solid var(--accent-secondary);
+}
+
+/* FLUTTER & REACT NATIVE */
+.tech-spec-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.spec-item {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.showcase-ui {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.ui-card {
+  width: 150px;
+  height: 250px;
+  background: linear-gradient(45deg, #2196F3, #21CBF3);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.bridge-animation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  padding: 20px;
+  border-radius: 50px;
+  margin: 30px 0;
+  position: relative;
+}
+
+.bridge {
+  position: relative;
+  width: 200px;
+  text-align: center;
+  border-bottom: 2px dashed #555;
+  padding-bottom: 10px;
+}
+
+.moving-packet {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  animation: bridge-move 2s infinite linear;
+}
+
+@keyframes bridge-move {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+/* REAL WORLD EXAMPLES */
+.app-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.app-icon {
+  font-size: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.reasoning {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.tag {
+  background: var(--accent-color);
+  color: #000;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.tag-pill {
+  border: 1px solid var(--accent-secondary);
+  color: var(--accent-secondary);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin: 0 5px;
+}
+
+/* COMPARISON TABLE */
+.comparison-vis {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+.comparison-vis th,
+.comparison-vis td {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.col-native {
+  border-left: 2px solid var(--accent-color);
+}
+
+.col-cross {
+  border-left: 2px solid var(--accent-secondary);
+}
+
+.highlight {
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* CHARTS */
+.chart-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 300px;
+  gap: 30px;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 10px;
+  margin-top: 40px;
+}
+
+.bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.bar {
+  width: 100%;
+  background: var(--accent-color);
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 10px;
+  font-size: 0.9rem;
+  color: #000;
+  font-weight: bold;
+  animation: grow-bar 1s ease-out forwards;
+}
+
+@keyframes grow-bar {
+  from {
+    height: 0;
+  }
+}
+
+.bar-label {
+  margin-bottom: 10px;
+}
+
+/* DECISION GUIDE */
+.decision-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.decision-card {
+  width: 200px;
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.decision-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.res {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.res.native {
+  color: var(--accent-color);
+}
+
+.res.cross {
+  color: var(--accent-secondary);
+}
+
+.res.hybrid {
+  color: var(--accent-purple);
+}
+
+/* ROADMAP */
+.roadmap-timeline {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  position: relative;
+}
+
+.roadmap-timeline::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 10%;
+  right: 10%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+
+.milestone {
+  text-align: center;
+  background: var(--bg-dark);
+  padding: 0 10px;
+}
+
+.marker {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/* CLOSING */
+.slide-closing {
+  text-align: center;
+}
+
+.closing-title {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.closing-actions p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+/* REDESIGNED ANDROID SLIDE GRID */
+.android-dev-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.tech-stack-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tech-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  /* slightly lighter than card-bg */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 15px 20px;
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  backdrop-filter: blur(10px);
+}
+
+.tech-card:hover {
+  transform: translateX(10px) scale(1.02);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--accent-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 8px;
+}
+
+/* REDESIGNED ANDROID SLIDE (3-COLUMN) */
+.center-header {
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.android-tech-grid.three-col {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.tech-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.col-title {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+}
+
+/* Large Card for IDE */
+.tech-card-large {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-card-large:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+  border-color: var(--android-color);
+  box-shadow: 0 10px 30px rgba(61, 220, 132, 0.2);
+}
+
+.card-icon-large {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.tech-logo-large {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.status-badge.official {
+  background: rgba(61, 220, 132, 0.2);
+  color: var(--android-color);
+  border: 1px solid var(--android-color);
+}
+
+/* Medium Cards for Lang/UI */
+.tech-card-medium {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
+}
+
+.tech-card-medium:hover {
+  transform: translateX(5px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Active vs Legacy Styling */
+.active-tech {
+  border-left: 4px solid var(--android-color);
+}
+
+.legacy-tech {
+  border-left: 4px solid var(--text-muted);
+  opacity: 0.7;
+}
+
+.tech-logo-small {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+svg.tech-logo-small {
+  width: 40px;
+  height: 40px;
+}
+
+.tech-info h4 {
+  font-size: 1rem;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.badge-modern {
+  font-size: 0.7rem;
+  background: var(--android-color);
+  color: #000;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.badge-legacy {
+  font-size: 0.7rem;
+  background: #555;
+  color: #ccc;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* XML Placeholder Icon */
+.xml-icon-placeholder {
+  width: 40px;
+  height: 40px;
+  background: #333;
+  color: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.tech-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-info h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.card-info p {
+  margin: 5px 0 0 0;
+  font-size: 0.85rem;
+  color: #bbb;
+}
+
+.badge-mini {
+  background: var(--accent-color);
+  color: #000;
+  font-size: 0.6rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.legacy-text {
+  font-style: italic;
+  opacity: 0.6;
+}
+
+/* Right Column Visuals */
+.visual-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.lottie-wrapper {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.code-overlay {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: #1e1e1e;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid #444;
+  opacity: 0.9;
+  transform: rotate(-5deg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  font-size: 0.7rem;
+  pointer-events: none;
+}
+
+.bottom-insight {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: inline-block;
+}
+
+.highlight-text {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+/* iOS Theme Overrides */
+.ios-theme:hover {
+  border-color: var(--ios-color);
+  box-shadow: 0 10px 30px rgba(0, 122, 255, 0.3);
+}
+
+.status-badge.official.ios-badge {
+  color: var(--ios-color);
+  border-color: var(--ios-color);
+  background: rgba(0, 122, 255, 0.2);
+}
+
+.active-tech.ios-active {
+  border-left-color: var(--ios-color);
+}
+
+.badge-modern.ios-badge {
+  background: var(--ios-color);
+  color: #fff;
+}
+
+/* Header Logo Styles */
+.header-logo {
+  height: 60px;
+  width: auto;
+  margin-right: 20px;
+}
+
+.android-logo-glow {
+  filter: drop-shadow(0 0 10px rgba(61, 220, 132, 0.5));
+}
+
+.ios-logo-glow {
+  filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(0, 122, 255, 0.5));
+}
+
+/* Intro Slide Logos */
+.intro-logos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.intro-logo {
+  height: 80px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.intro-logo:hover {
+  transform: scale(1.1);
+}
+
+.react-logo-spin {
+  animation: spin-slow 10s linear infinite;
+}
+
+.flutter-logo-glow {
+  filter: drop-shadow(0 0 10px rgba(66, 165, 245, 0.5));
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Cross-Platform Slide Redesign */
+.cp-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.codebase-visual {
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 0;
+  width: 300px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid #333;
+  overflow: hidden;
+}
+
+.code-block-header {
+  background: #2d2d2d;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: #aaa;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot.red {
+  background: #ff5f56;
+}
+
+.dot.yellow {
+  background: #ffbd2e;
+}
+
+.dot.green {
+  background: #27c93f;
+}
+
+.code-content {
+  padding: 15px;
+  font-family: 'JetBrains Mono', monospace;
+  color: #a9b7c6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.typing-cursor {
+  width: 8px;
+  height: 1.2rem;
+  background: var(--accent-color);
+  animation: blink 1s infinite;
+}
+
+.branching-paths {
+  position: relative;
+  height: 60px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.path-line {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--accent-color), rgba(255, 255, 255, 0.2));
+  transform-origin: top center;
+}
+
+.left-path {
+  left: 50%;
+  transform: translateX(-50%) rotate(25deg);
+  height: 70px;
+}
+
+.right-path {
+  right: 50%;
+  transform: translateX(50%) rotate(-25deg);
+  height: 70px;
+}
+
+.platform-targets {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  position: absolute;
+  bottom: -20px;
+}
+
+.platform-logo {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+.platform-logo:hover {
+  transform: scale(1.2);
+}
+
+.android-glow {
+  filter: drop-shadow(0 0 8px rgba(61, 220, 132, 0.6));
+}
+
+.ios-glow {
+  filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(0, 122, 255, 0.6));
+}
+
+.framework-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.framework-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.framework-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.fw-logo {
+  height: 50px;
+  width: auto;
+  margin-bottom: 10px;
+}
+
+.react-spin {
+  animation: spin-slow 12s linear infinite;
+}
+
+.framework-card h4 {
+  margin: 5px 0;
+  font-size: 1.1rem;
+}
+
+.framework-card p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Flutter Slide Redesign */
+.flutter-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.specs-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.glass-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s;
+}
+
+.glass-card:hover {
+  background: rgba(66, 165, 245, 0.15);
+  /* Flutter Blue tint */
+  border-color: #42A5F5;
+  transform: translateX(10px);
+}
+
+.card-icon {
+  font-size: 1.5rem;
+}
+
+.card-text h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.card-text p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.features-column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.feature-box {
+  background: linear-gradient(135deg, rgba(66, 165, 245, 0.1), rgba(25, 118, 210, 0.1));
+  border: 1px solid #42A5F5;
+  border-radius: 20px;
+  padding: 30px;
+  width: 80%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-box.hot-reload {
+  box-shadow: 0 0 20px rgba(255, 235, 59, 0.2);
+  border-color: #FDD835;
+}
+
+.bolt-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  animation: flash 2s infinite;
+}
+
+.widget-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.feature-box h3 {
+  margin: 10px 0;
+  color: #fff;
+}
+
+.feature-box p {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.flutter-logo-glow {
+  filter: drop-shadow(0 0 10px rgba(66, 165, 245, 0.5));
+}
+
+@keyframes flash {
+
+  0%,
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 10px #FDD835;
+  }
+
+  50% {
+    opacity: 0.5;
+    text-shadow: none;
+  }
+}
+
+/* Flutter Detailed Grid */
+.flutter-detailed-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.detail-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  min-height: 140px;
+}
+
+.card-label {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 0.8rem;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-logo {
+  height: 60px;
+  width: auto;
+  margin-bottom: 10px;
+  object-fit: contain;
+  /* Ensure logos don't stretch */
+}
+
+.card-logo.small {
+  height: 50px;
+}
+
+.ide-logos {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.widget-visual {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hot-reload-card .bolt-icon {
+  font-size: 3rem;
+  margin-bottom: 5px;
+  color: #FDD835;
+}
+
+/* Platforms Section */
+.platforms-section {
+  grid-column: 1 / -1;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.platforms-section h3 {
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 15px;
+  font-weight: normal;
+}
+
+.platform-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.platform-icon {
+  height: 40px;
+  width: auto;
+  opacity: 0.8;
+  transition: transform 0.3s, opacity 0.3s;
+  object-fit: contain;
+}
+
+.platform-icon:hover {
+  transform: translateY(-5px) scale(1.1);
+  opacity: 1;
+}
+
+/* Refined Flutter Layout */
+.flutter-refine-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.compact-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.detail-card.compact {
+  flex: 1;
+  min-height: 80px;
+  padding: 15px;
+  flex-direction: row;
+  /* Horizontal layout */
+  justify-content: flex-start;
+}
+
+.detail-card.compact .card-label {
+  top: 5px;
+  left: 10px;
+  font-size: 0.7rem;
+}
+
+.horizontal-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-top: 15px;
+  /* Space for label */
+  width: 100%;
+  justify-content: center;
+}
+
+.card-logo.x-small {
+  height: 35px;
+}
+
+.detail-card.compact h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* UI Section (Widget Tree) */
+.ui-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.ui-section h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.widget-tree-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.tree-node {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tree-branches {
+  display: flex;
+  gap: 20px;
+  position: relative;
+}
+
+/* Connectors */
+.connector-down {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  width: 2px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.tree-branches::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.tree-branches::after {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 15%;
+  right: 15%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Specific connector adjustments for branches not typically needed with simple pseudo-elements, 
+   but maintaining simple tree visual here */
+
+.code-hint {
+  font-size: 0.7rem;
+  color: #81D4FA;
+  /* Light Blue */
+  margin-left: 5px;
+  font-style: italic;
+}
+
+/* Large Platforms Section */
+.platforms-section-large {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.platforms-section-large h3 {
+  font-size: 1.5rem;
+  /* Larger header */
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.platform-row-large {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  /* More spacing */
+  align-items: center;
+}
+
+.platform-icon-large {
+  height: 60px;
+  /* Significantly larger */
+  width: auto;
+  opacity: 0.85;
+  transition: transform 0.3s, opacity 0.3s;
+  object-fit: contain;
+}
+
+.platform-icon-large:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.platform-icon-large[alt="HarmonyOS"] {
+  height: 35px;
+  /* Proportional adjustment */
+}
+
+/* Specific styling for HarmonyOS to ensure visibility */
+.platform-icon[alt="HarmonyOS"] {
+  /* Adjust height as text logos might be wider */
+}
+
+/* UI Language Section */
+.ui-lang-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px;
+}
+
+.ui-lang-logo {
+  height: 80px;
+  width: auto;
+  filter: drop-shadow(0 0 10px rgba(66, 165, 245, 0.3));
+}
+
+.ui-lang-text {
+  text-align: left;
+}
+
+.ui-lang-text h4 {
+  font-size: 1.5rem;
+  margin: 0 0 5px 0;
+  color: #fff;
+}
+
+.ui-lang-text p {
+  margin: 0;
+  color: #aaa;
+}
+
+/* KMP Flow Animation */
+.kmp-flow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+.source-node {
+  background: rgba(127, 82, 255, 0.25);
+  border: 1px solid rgba(127, 82, 255, 0.5);
+  padding: 10px 25px;
+  border-radius: 50px;
+  /* Pill shape */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 0 15px rgba(127, 82, 255, 0.2);
+}
+
+.source-logo {
+  height: 40px;
+  width: auto;
+}
+
+.node-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.node-label strong {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.node-label .sub-label {
+  font-size: 0.75rem;
+  color: #ccc;
+}
+
+
+/* Flow Lines */
+.flow-lines-container {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 40px;
+  position: relative;
+}
+
+.flow-line {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(127, 82, 255, 0.8), rgba(255, 255, 255, 0.3));
+  height: 0;
+  animation: growLine 1.5s forwards ease-in-out;
+}
+
+/* Flow Lines for 5 Targets */
+/* Tree Lines (SVG) */
+.tree-lines-container {
+  width: 90%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 5px 0;
+}
+
+.tree-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.tree-path {
+  fill: none;
+  stroke: rgba(127, 82, 255, 0.6);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawLines 2s forwards ease-in-out;
+}
+
+@keyframes drawLines {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Specific Target Styling */
+/* Target Row */
+.target-nodes-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 8px;
+}
+
+.target-node {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s;
+}
+
+.target-node strong {
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.target-node .sub-label {
+  font-size: 0.6rem;
+  color: #aaa;
+  display: none;
+}
+
+.target-node:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.node-icon-wrapper {
+  margin-bottom: 5px;
+  padding: 8px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.target-icon {
+  height: 20px;
+  width: 20px;
+}
+
+/* Compact Shared Source */
+.source-node {
+  padding: 8px 16px;
+  margin-bottom: 0;
+}
+
+.source-node .source-logo {
+  height: 30px;
+  width: 30px;
+}
+
+.android-wrapper {
+  border: 1px solid #3DDC84;
+}
+
+.ios-wrapper {
+  border: 1px solid #fff;
+}
+
+.server-wrapper {
+  border: 1px solid #FDD835;
+}
+
+.desktop-wrapper {
+  border: 1px solid #9C27B0;
+}
+
+.web-wrapper {
+  border: 1px solid #2196F3;
+}
+
+/* CMP Slide Specifics */
+.cmp-slide h2 {
+  background: linear-gradient(135deg, #4285F4, #03DAC6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cmp-source {
+  background: rgba(66, 133, 244, 0.25);
+  border: 1px solid rgba(66, 133, 244, 0.5);
+  box-shadow: 0 0 15px rgba(66, 133, 244, 0.2);
+}
+
+.cmp-source img {
+  height: 40px;
+  width: auto;
+}
