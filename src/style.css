@@ -1951,9 +1951,6 @@ svg.tech-logo-small {
   height: 40px;
   width: auto;
 }
-
-   
-
 /* CAREER SLIDES STYLING */
 .career-header {
   display: flex;
@@ -2850,3 +2847,710 @@ svg.tech-logo-small {
     height: 30px !important;
   }
 }
+/* ============================================
+   IMPROVED CAREER SLIDES TYPOGRAPHY
+   ============================================ */
+
+/* Career Header - Clean Text-Only Design */
+.career-header-compact {
+  margin-bottom: 50px;
+  text-align: left;
+  border-left: 4px solid var(--accent-color);
+  padding-left: 30px;
+}
+
+.career-header-compact h2 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+  margin: 0;
+  line-height: 1.1;
+  background: linear-gradient(135deg, #ffffff, var(--accent-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Career Grid - Two Column Layout */
+.career-grid-compact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* Career Section Containers */
+.career-section-compact {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+}
+
+/* Section Titles - Improved Typography */
+.section-title-small {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: var(--accent-color);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Company List - Text Only */
+.company-list-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.company-item-compact {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  border-left: 3px solid rgba(61, 220, 132, 0.3);
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+.company-item-compact:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-left-color: var(--accent-color);
+  transform: translateX(10px);
+}
+
+/* Salary Table - Clean Design */
+.salary-table-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.salary-row-compact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.salary-row-compact:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(5px);
+}
+
+.level-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.salary-text {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--accent-color);
+  letter-spacing: 0.5px;
+}
+
+.salary-row-compact.entry .salary-text {
+  color: #61dafb;
+}
+
+.salary-row-compact.mid .salary-text {
+  color: var(--accent-color);
+}
+
+.salary-row-compact.senior .salary-text {
+  color: #FFD700;
+}
+
+/* Note Text */
+.note-text {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-style: italic;
+  text-align: center;
+}
+
+/* Market Tags */
+.market-tag {
+  margin-top: 40px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.badge-high,
+.badge-medium,
+.badge-neutral {
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.badge-high {
+  background: linear-gradient(135deg, var(--accent-color), #2bc760);
+  color: #0f0c29;
+}
+
+.badge-medium {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: #0f0c29;
+}
+
+.badge-neutral {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-main);
+}
+
+
+/* ============================================
+   MODULE 2 - ANDROID APP DEVELOPMENT STYLES
+   ============================================ */
+
+/* Requirements Grid */
+.requirements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.req-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.req-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent-color);
+}
+
+.req-icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.req-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 10px 0;
+  color: var(--accent-color);
+}
+
+.req-card p {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin: 15px 0;
+  color: #fff;
+}
+
+.req-note {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Workflow Diagram */
+.workflow-diagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 80px;
+  flex-wrap: wrap;
+}
+
+.workflow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-color), #2bc760);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #0f0c29;
+}
+
+.step-content h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+
+.step-content p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 5px 0 0 0;
+  text-align: center;
+}
+
+.workflow-arrow {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  font-weight: 300;
+}
+
+/* Roadmap Slides */
+.roadmap-slide {
+  text-align: left !important;
+}
+
+.roadmap-header {
+  margin-bottom: 50px;
+}
+
+.step-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent-color), #2bc760);
+  color: #0f0c29;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+}
+
+.step-badge.step-2 { background: linear-gradient(135deg, #61dafb, #2196F3); }
+.step-badge.step-3 { background: linear-gradient(135deg, #FFD700, #FFA500); }
+.step-badge.step-4 { background: linear-gradient(135deg, #ff6b6b, #ee5a6f); }
+.step-badge.step-5 { background: linear-gradient(135deg, #4ecdc4, #44a08d); }
+.step-badge.step-6 { background: linear-gradient(135deg, #a8edea, #fed6e3); }
+.step-badge.step-7 { background: linear-gradient(135deg, #f093fb, #f5576c); }
+.step-badge.step-8 { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+.step-badge.step-9 { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+
+.roadmap-header h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 0;
+  background: linear-gradient(135deg, #ffffff, var(--accent-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.roadmap-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.roadmap-intro {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.focus-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.focus-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 3px solid var(--accent-color);
+  padding: 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.focus-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateX(10px);
+}
+
+.focus-bullet {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+.focus-item h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+  color: #fff;
+}
+
+.focus-item p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.roadmap-outcome {
+  background: linear-gradient(135deg, rgba(61, 220, 132, 0.1), rgba(43, 199, 96, 0.05));
+  border: 2px solid rgba(61, 220, 132, 0.3);
+  border-radius: 15px;
+  padding: 25px 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.outcome-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.roadmap-outcome p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+}
+
+/* Closing Slide */
+.slide-closing {
+  text-align: center;
+}
+
+.closing-title {
+  font-size: 4rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #ffffff, var(--accent-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+}
+
+.closing-actions {
+  margin-top: 60px;
+}
+
+.closing-actions p {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 20px 0;
+}
+
+
+/* Compact Requirements Grid */
+.requirements-grid-compact {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-top: 60px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.req-card-compact {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 25px 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.req-card-compact:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent-color);
+}
+
+.req-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.req-card-compact h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .requirements-grid-compact {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .requirements-grid-compact {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* Roadmap Title Slide */
+.roadmap-main-title {
+  font-size: 4rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #ffffff, var(--accent-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.roadmap-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+
+/* Reduce Roadmap Slide Sizes */
+.roadmap-slide h2 {
+  font-size: 2.5rem !important;
+  font-weight: 900;
+  margin: 0;
+}
+
+.roadmap-intro {
+  font-size: 1.1rem !important;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 25px !important;
+  font-weight: 300;
+}
+
+.focus-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px !important;
+}
+
+.focus-item {
+  padding: 15px !important;
+  border-radius: 8px !important;
+}
+
+.focus-item h4 {
+  font-size: 1.1rem !important;
+  font-weight: 700;
+  margin: 0 0 3px 0 !important;
+  color: #fff;
+}
+
+.focus-item p {
+  font-size: 0.9rem !important;
+  color: var(--text-muted);
+  margin: 0 !important;
+}
+
+.roadmap-outcome {
+  padding: 20px 25px !important;
+  margin-top: 30px !important;
+}
+
+.outcome-icon {
+  font-size: 2rem !important;
+}
+
+.roadmap-outcome p {
+  font-size: 1.1rem !important;
+  font-weight: 600;
+}
+
+
+/* SDK Explanation Slide */
+.sdk-explanation-slide {
+  text-align: center;
+}
+
+.sdk-title {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.sdk-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 60px;
+}
+
+.sdk-diagram {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.sdk-core {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.sdk-core h3 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.sdk-components {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.sdk-tag {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.sdk-tag:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  transform: translateY(-3px);
+  color: #0f0c29;
+}
+
+.sdk-description {
+  max-width: 700px;
+  margin: 40px auto 0;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* Fix Overflow Issues - More Aggressive Size Reduction */
+.roadmap-slide .roadmap-header {
+  margin-bottom: 35px !important;
+}
+
+.roadmap-slide h2 {
+  font-size: 2.2rem !important;
+}
+
+.roadmap-intro {
+  font-size: 1rem !important;
+  margin-bottom: 20px !important;
+}
+
+.focus-list {
+  gap: 12px !important;
+}
+
+.focus-item {
+  padding: 12px 15px !important;
+}
+
+.focus-item h4 {
+  font-size: 1rem !important;
+  margin: 0 0 2px 0 !important;
+}
+
+.focus-item p {
+  font-size: 0.85rem !important;
+}
+
+.roadmap-outcome {
+  padding: 15px 20px !important;
+  margin-top: 20px !important;
+  border-radius: 12px !important;
+}
+
+.outcome-icon {
+  font-size: 1.8rem !important;
+}
+
+.roadmap-outcome p {
+  font-size: 1rem !important;
+  font-weight: 600;
+}
+
+.sdk-hint {
+  margin-top: 15px !important;
+  font-size: 0.85rem !important;
+}
+
+/* Fix Navigation Arrows Position */
+.reveal .controls {
+  bottom: 20px !important;
+}
+
+/* Adjust Roadmap Content Container */
+.roadmap-content {
+  gap: 25px !important;
+}
+
+/* Step Badge */
+.step-badge {
+  font-size: 0.85rem !important;
+  padding: 6px 16px !important;
+  margin-bottom: 12px !important;
+}
+
+
+/* Move Navigation Arrows Higher to Show Slide Number */
+.reveal .controls {
+  bottom: 50px !important;
+}
+
+
+/* Move Slide Number Up to Be Visible */
+.reveal .slide-number {
+  bottom: 15px !important;
+}
+
+
+/* Move Slide Number Much Higher */
+.reveal .slide-number {
+  bottom: 60px !important;
+}
+

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 2: Android App Development</title>
+  <!-- Prevent FOUC -->
+  <style>
+    body {
+      opacity: 0;
+      background: #0f0c29;
+      transition: opacity 0.4s ease;
+    }
+
+    body.reveal-ready {
+      opacity: 1;
+    }
+  </style>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- Back to Modules Button -->
+  <a href="index.html" class="back-to-modules">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M19 12H5M12 19l-7-7 7-7" />
+    </svg>
+    Back to Modules
+  </a>
+
+  <div class="reveal">
+    <div class="slides">
+
+
+      <!-- SLIDE 2: Requirements -->
+      <section>
+        <h2>What You Need</h2>
+        <div class="requirements-grid-compact">
+          <!-- IDE -->
+          <div class="req-card-compact fragment fade-up">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Android_Studio_Icon_3.6.svg"
+              alt="Android Studio" class="req-logo">
+            <h3>Android Studio</h3>
+          </div>
+
+          <!-- Languages -->
+          <div class="req-card-compact fragment fade-up">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png" alt="Kotlin"
+              class="req-logo">
+            <h3>Kotlin</h3>
+          </div>
+
+          <div class="req-card-compact fragment fade-up">
+            <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java"
+              class="req-logo">
+            <h3>Java</h3>
+          </div>
+
+          <!-- UI Tools -->
+          <div class="req-card-compact fragment fade-up">
+            <img
+              src="https://3.bp.blogspot.com/-VVp3WvJvl84/X0Vu6EjYqDI/AAAAAAAAPjU/ZOMKiUlgfg8ok8DY8Hc-ocOvGdB0z86AgCLcBGAsYHQ/s1600/jetpack%2Bcompose%2Bicon_RGB.png"
+              alt="Jetpack Compose" class="req-logo">
+            <h3>Jetpack Compose</h3>
+          </div>
+
+          <div class="req-card-compact fragment fade-up">
+            <img src="https://cdn-icons-png.flaticon.com/512/1197/1197460.png" alt="XML" class="req-logo">
+            <h3>XML</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 2: Native Android Development Roadmap -->
+      <section>
+        <h1 class="roadmap-main-title">Native Android Development Roadmap</h1>
+        <p class="roadmap-subtitle fragment fade-up">9 Essential Steps to Master Android Development</p>
+      </section>
+
+      <!-- SLIDE 4: Roadmap Step 1 - Kotlin Fundamentals -->
+      <section class="roadmap-slide">
+        <div class="roadmap-header">
+          <span class="step-badge">Step 1/9</span>
+          <h2>Kotlin Fundamentals</h2>
+        </div>
+
+        <div class="roadmap-content">
+          <div class="roadmap-main">
+            <p class="roadmap-intro">Master Kotlin — the official Android language</p>
+
+            <div class="focus-list">
+              <div class="focus-item fragment fade-up">
+                <div class="focus-bullet">✓</div>
+                <div>
+                  <h4>Kotlin Basics</h4>
+                  <p>Syntax, OOP principles</p>
+                </div>
+              </div>
+
+              <div class="focus-item fragment fade-up">
+                <div class="focus-bullet">✓</div>
+                <div>
+                  <h4>Functions & Collections</h4>
+                  <p>Lambda, higher-order functions</p>
+                </div>
+              </div>
+
+              <div class="focus-item fragment fade-up">
+                <div class="focus-bullet">✓</div>
+                <div>
+                  <h4>Extension Functions</h4>
+                  <p>Extend existing classes</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="roadmap-outcome fragment">
+            <div class="outcome-icon">💡</div>
+            <p>Sets the base for everything Android</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 5: Roadmap Step 2 - Jetpack Compose -->
+      <section class="roadmap-slide">
+        <div class="roadmap-header">
+          <span class="step-badge step-2">Step 2/9</span>
+          <h2>Jetpack Compose</h2>
+        </div>
+
+        <div class="roadmap-content">
+          <div class="roadmap-main">
+            <p class="roadmap-intro">Modern UI toolkit for Android</p>
+
+            <div class="focus-list">
+              <div class="focus-item fragment fade-up">
+                <div class="focus-bullet">✓</div>
+                <div>
+                  <h4>Declarative UI</h4>
+                  <p>Describe what, not how</p>
+                </div>
+              </div>
+
+              <div class="focus-item fragment fade-up">
+                <div class="focus-bullet">✓</div>
+                <div>
+                  <h4>Composables</h4>
+                  <p>@Composable functions</p>
+                </div>
+              </div>
+
+              <div class="focus-item fragment fade-up">
+                <div class="focus-bullet">✓</div>
+                <div>
+                  <h4>State Handling</h4>
+                  <p>remember, mutableStateOf</p>
+                </div>
+              </div>
+
+              <div class="focus-item fragment fade-up">
+                <div class="focus-bullet">✓</div>
+                <div>
+                  <h4>Lists & Layouts</h4>
+                  <p>LazyColumn, Row, Column</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="roadmap-outcome fragment">
+            <div class="outcome-icon">🎨</div>
+            <p>Compose is the standard UI framework in Android now</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: Roadmap Step 3 - Android SDK Core -->
+      <section>
+        <!-- Main Step 3 Slide -->
+        <section class="roadmap-slide">
+          <div class="roadmap-header">
+            <span class="step-badge step-3">Step 3/9</span>
+            <h2>Android SDK Core Basics</h2>
+          </div>
+
+          <div class="roadmap-content">
+            <div class="roadmap-main">
+              <p class="roadmap-intro">How Android apps actually work</p>
+
+              <div class="focus-list">
+                <div class="focus-item fragment fade-up">
+                  <div class="focus-bullet">✓</div>
+                  <div>
+                    <h4>Project Structure</h4>
+                    <p>Android Studio organization</p>
+                  </div>
+                </div>
+
+                <div class="focus-item fragment fade-up">
+                  <div class="focus-bullet">✓</div>
+                  <div>
+                    <h4>Gradle Build System</h4>
+                    <p>Dependencies, build types</p>
+                  </div>
+                </div>
+
+                <div class="focus-item fragment fade-up">
+                  <div class="focus-bullet">✓</div>
+                  <div>
+                    <h4>Manifest & Resources</h4>
+                    <p>App configuration, strings, drawables</p>
+                  </div>
+                </div>
+
+                <div class="focus-item fragment fade-up">
+                  <div class="focus-bullet">✓</div>
+                  <div>
+                    <h4>App Lifecycle</h4>
+                    <p>Activities, Fragments, Navigation</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="roadmap-outcome fragment">
+              <div class="outcome-icon">⚙️</div>
+              <p>Context beyond just UI code</p>
+            </div>
+          </div>
+
+          <p class="sdk-hint fragment"
+            style="margin-top: 30px; text-align: center; color: var(--accent-color); font-size: 0.9rem;">
+            ↓ Press Down to learn: What is an SDK?
+          </p>
+        </section>
+
+        <!-- Nested Vertical Slide: What is SDK -->
+        <section class="sdk-explanation-slide">
+          <h1 class="sdk-title">What is an SDK?</h1>
+          <p class="sdk-subtitle">Software Development Kit</p>
+
+          <div class="sdk-diagram fragment fade-up">
+            <div class="sdk-core">
+              <h3>SDK Core</h3>
+              <div class="sdk-components">
+                <span class="sdk-tag">Libraries</span>
+                <span class="sdk-tag">APIs</span>
+                <span class="sdk-tag">Emulator</span>
+                <span class="sdk-tag">Debug Tools</span>
+                <span class="sdk-tag">Build System</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="sdk-description fragment fade-up">
+            A collection of tools, libraries, and documentation that help developers build apps for a specific platform.
+          </p>
+        </section>
+      </section>
+
+      <!-- SLIDE 7: Roadmap Step 4 - Coroutines -->
+      <section class="roadmap-slide">
+        <div class="roadmap-header">
+          <span class="step-badge step-4">Step 4/9</span>
+          <h2>Coroutines</h2>
+        </div>
+
+        <div class="roadmap-content">
+          <div class="roadmap-main">
+            <p class="roadmap-intro">Handle background work & keep UI responsive</p>
+
+            <div class="focus-list">
+              <div class="focus-item fragment fade-up">
+                <div class="focus-bullet">✓</div>
+                <div>
+                  <h4>Coroutine Basics</h4>
+                  <p>Suspend functions, scopes</p>
+                </div>
+              </div>
+
+              <div class="focus-item fragment fade-up">
+                <div class="focus-bullet">✓</div>
+                <div>
+                  <h4>Launching Jobs</h4>
+                  <p>launch, async, await</p>
+                </div>
+              </div>
+
+              <div class="focus-item fragment fade-up">
+                <div class="focus-bullet">✓</div>
+                <div>
+                  <h4>Structured Concurrency</h4>
+                  <p>Parent-child relationships</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="roadmap-outcome fragment">
+            <div class="outcome-icon">⚡</div>
+            <p>Essential for real app logic</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 8: Roadmap Step 5 - Room Database -->
+      <section class="roadmap-slide">
+        <div class="roadmap-header">
+          <span class="step-badge step-5">Step 5/9</span>
+          <h2>Local Data Persistence (Room)</h2>
+        </div>
+
+        <div class="roadmap-content">
+          <div class="roadmap-main">
+            <p class="roadmap-intro">Most apps need offline storage</p>
+
+            <div class="focus-list">
+              <div class="focus-item fragment fade-up">
+                <div class="focus-bullet">✓</div>
+                <div>
+                  <h4>Room Database Setup</h4>
+                  <p>Database, Entity, DAO</p>
+                </div>
+              </div>
+
+              <div class="focus-item fragment fade-up">
+                <div class="focus-bullet">✓</div>
+                <div>
+                  <h4>Entities & DAOs</h4>
+                  <p>Data models, database access</p>
+                </div>
+              </div>
+
+              <div class="focus-item fragment fade-up">
+                <div class="focus-bullet">✓</div>
+                <div>
+                  <h4>Query Basics</h4>
+                  <p>@Query annotations, CRUD</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="roadmap-outcome fragment">
+            <div class="outcome-icon">💾</div>
+            <p>Makes apps functional without constant network</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 9: Roadmap Step 6 - Networking -->
+      <section class="roadmap-slide">
+        <div class="roadmap-header">
+          <span class="step-badge step-6">Step 6/9</span>
+          <h2>Networking / API Integration</h2>
+        </div>
+
+        <div class="roadmap-content">
+          <div class="roadmap-main">
+            <p class="roadmap-intro">Connect to servers and real data</p>
+
+            <div class="focus-list">
+              <div class="focus-item fragment fade-up">
+                <div class="focus-bullet">✓</div>
+                <div>
+                  <h4>REST API Calls</h4>
+                  <p>Retrofit, HTTP methods</p>
+                </div>
+              </div>
+
+              <div class="focus-item fragment fade-up">
+                <div class="focus-bullet">✓</div>
+                <div>
+                  <h4>JSON Parsing</h4>
+                  <p>Gson, Kotlinx.serialization</p>
+                </div>
+              </div>
+
+              <div class="focus-item fragment fade-up">
+                <div class="focus-bullet">✓</div>
+                <div>
+                  <h4>Error Handling</h4>
+                  <p>Try-catch, response codes</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="roadmap-outcome fragment">
+            <div class="outcome-icon">🌐</div>
+            <p>Needed for dynamic data-driven apps</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 10: Roadmap Step 7 - Dependency Injection -->
+      <section class="roadmap-slide">
+        <div class="roadmap-header">
+          <span class="step-badge step-7">Step 7/9</span>
+          <h2>Dependency Injection</h2>
+        </div>
+
+        <div class="roadmap-content">
+          <div class="roadmap-main">
+            <p class="roadmap-intro">Clean professional code requires DI</p>
+
+            <div class="focus-list">
+              <div class="focus-item fragment fade-up">
+                <div class="focus-bullet">✓</div>
+                <div>
+                  <h4>Replace Hard-coded Dependencies</h4>
+                  <p>Hilt, Koin frameworks</p>
+                </div>
+              </div>
+
+              <div class="focus-item fragment fade-up">
+                <div class="focus-bullet">✓</div>
+                <div>
+                  <h4>Improve Testability</h4>
+                  <p>Mock dependencies easily</p>
+                </div>
+              </div>
+
+              <div class="focus-item fragment fade-up">
+                <div class="focus-bullet">✓</div>
+                <div>
+                  <h4>Reduce Boilerplate</h4>
+                  <p>Auto-inject dependencies</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="roadmap-outcome fragment">
+            <div class="outcome-icon">🔌</div>
+            <p>Industry standard for medium/large apps</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 11: Roadmap Step 8 - Architecture Patterns -->
+      <section class="roadmap-slide">
+        <div class="roadmap-header">
+          <span class="step-badge step-8">Step 8/9</span>
+          <h2>Architecture Patterns</h2>
+        </div>
+
+        <div class="roadmap-content">
+          <div class="roadmap-main">
+            <p class="roadmap-intro">Structure for maintainability and growth</p>
+
+            <div class="focus-list">
+              <div class="focus-item fragment fade-up">
+                <div class="focus-bullet">✓</div>
+                <div>
+                  <h4>MVVM Pattern</h4>
+                  <p>Model-View-ViewModel</p>
+                </div>
+              </div>
+
+              <div class="focus-item fragment fade-up">
+                <div class="focus-bullet">✓</div>
+                <div>
+                  <h4>Separation of Concerns</h4>
+                  <p>Clear layer responsibilities</p>
+                </div>
+              </div>
+
+              <div class="focus-item fragment fade-up">
+                <div class="focus-bullet">✓</div>
+                <div>
+                  <h4>Clear Data Flow</h4>
+                  <p>Unidirectional data flow</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="roadmap-outcome fragment">
+            <div class="outcome-icon">🏗️</div>
+            <p>How real teams build robust apps</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 12: Roadmap Step 9 - Reactive Streams -->
+      <section class="roadmap-slide">
+        <div class="roadmap-header">
+          <span class="step-badge step-9">Step 9/9</span>
+          <h2>Reactive / Flow Data Streams</h2>
+        </div>
+
+        <div class="roadmap-content">
+          <div class="roadmap-main">
+            <p class="roadmap-intro">Modern apps handle streams of data</p>
+
+            <div class="focus-list">
+              <div class="focus-item fragment fade-up">
+                <div class="focus-bullet">✓</div>
+                <div>
+                  <h4>Kotlin Flows</h4>
+                  <p>Cold streams, hot flows</p>
+                </div>
+              </div>
+
+              <div class="focus-item fragment fade-up">
+                <div class="focus-bullet">✓</div>
+                <div>
+                  <h4>Reactive UI + Backend Sync</h4>
+                  <p>StateFlow, SharedFlow</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="roadmap-outcome fragment">
+            <div class="outcome-icon">🔄</div>
+            <p>Makes apps resilient and responsive</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL SLIDE -->
+      <section class="slide-closing" data-state="closing-state">
+        <h1 class="closing-title">Master Android Development</h1>
+        <h2 class="fragment fade-up">Follow this roadmap step by step</h2>
+
+        <div class="closing-actions fragment fade-up">
+          <p>Build real projects.</p>
+          <p>Practice daily.</p>
+          <p>Ship apps to Play Store.</p>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
