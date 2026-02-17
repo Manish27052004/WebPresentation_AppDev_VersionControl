@@ -1951,6 +1951,7 @@ svg.tech-logo-small {
   height: 40px;
   width: auto;
 }
+
 /* CAREER SLIDES STYLING */
 .career-header {
   display: flex;
@@ -2847,6 +2848,7 @@ svg.tech-logo-small {
     height: 30px !important;
   }
 }
+
 /* ============================================
    IMPROVED CAREER SLIDES TYPOGRAPHY
    ============================================ */
@@ -3143,14 +3145,37 @@ svg.tech-logo-small {
   margin-bottom: 15px;
 }
 
-.step-badge.step-2 { background: linear-gradient(135deg, #61dafb, #2196F3); }
-.step-badge.step-3 { background: linear-gradient(135deg, #FFD700, #FFA500); }
-.step-badge.step-4 { background: linear-gradient(135deg, #ff6b6b, #ee5a6f); }
-.step-badge.step-5 { background: linear-gradient(135deg, #4ecdc4, #44a08d); }
-.step-badge.step-6 { background: linear-gradient(135deg, #a8edea, #fed6e3); }
-.step-badge.step-7 { background: linear-gradient(135deg, #f093fb, #f5576c); }
-.step-badge.step-8 { background: linear-gradient(135deg, #4facfe, #00f2fe); }
-.step-badge.step-9 { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+.step-badge.step-2 {
+  background: linear-gradient(135deg, #61dafb, #2196F3);
+}
+
+.step-badge.step-3 {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+}
+
+.step-badge.step-4 {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+}
+
+.step-badge.step-5 {
+  background: linear-gradient(135deg, #4ecdc4, #44a08d);
+}
+
+.step-badge.step-6 {
+  background: linear-gradient(135deg, #a8edea, #fed6e3);
+}
+
+.step-badge.step-7 {
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+}
+
+.step-badge.step-8 {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.step-badge.step-9 {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+}
 
 .roadmap-header h2 {
   font-size: 3rem;
@@ -3554,3 +3579,672 @@ svg.tech-logo-small {
   bottom: 60px !important;
 }
 
+/* ==============================================
+   MODULE 3: VERSION CONTROL (GIT & GITHUB)
+   ============================================== */
+
+/* Version Timeline Visual */
+.vc-visual {
+  margin: 50px 0;
+}
+
+.timeline-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.version-point {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.version-dot {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 15px;
+  box-shadow: 0 0 20px rgba(61, 220, 132, 0.3);
+  transition: all 0.3s ease;
+}
+
+.version-dot:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(61, 220, 132, 0.5);
+}
+
+.version-point span {
+  display: block;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 5px;
+}
+
+.version-point p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.version-arrow {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+}
+
+/* Importance Grid */
+.importance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.importance-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.importance-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent-color);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(61, 220, 132, 0.2);
+}
+
+.importance-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.importance-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.importance-card p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+
+/* VCS Types Comparison */
+.vcs-comparison {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.vcs-type {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.vcs-type.active-vcs {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 30px rgba(61, 220, 132, 0.3);
+}
+
+.vcs-type:hover {
+  transform: translateY(-5px);
+}
+
+.vcs-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.vcs-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.vcs-header h3 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.vcs-diagram {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.vcs-box {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 15px 30px;
+  text-align: center;
+}
+
+.vcs-box.server {
+  background: rgba(61, 220, 132, 0.1);
+  border-color: var(--accent-color);
+}
+
+.local-db {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.vcs-clients {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.vcs-clients.distributed {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.client {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
+
+.client.full {
+  text-align: center;
+}
+
+.client small {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.vcs-description {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.vcs-description p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 5px 0;
+}
+
+.highlight-text {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+/* Git Logo Glow */
+.git-logo-glow {
+  filter: drop-shadow(0 0 20px rgba(240, 80, 50, 0.5));
+}
+
+.github-logo-glow {
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+}
+
+/* Git Features Grid */
+.git-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.git-feature {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.git-feature:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #f05032;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(240, 80, 50, 0.2);
+}
+
+.git-feature .feature-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.git-feature h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.git-feature p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+/* GitHub Features Grid */
+.github-description {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.github-tagline {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 300;
+}
+
+.github-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.github-feature {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.github-feature:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+.github-feature .feature-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.github-feature h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.github-feature p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.github-stats {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Platform Comparison */
+.platform-comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.platform-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.github-card {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 30px rgba(61, 220, 132, 0.2);
+}
+
+.github-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 40px rgba(61, 220, 132, 0.3);
+}
+
+.gitlab-card:hover,
+.bitbucket-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.platform-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.platform-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.platform-header h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.platform-badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.badge-pro,
+.badge-alt {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.badge-pro {
+  background: var(--accent-color);
+  color: #0f0c29;
+}
+
+.badge-alt {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.platform-features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feature-item {
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.winner-banner {
+  margin-top: 50px;
+  text-align: center;
+  background: rgba(61, 220, 132, 0.1);
+  border: 2px solid var(--accent-color);
+  border-radius: 16px;
+  padding: 30px;
+}
+
+.winner-banner h3 {
+  font-size: 1.8rem;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.winner-banner p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Git Workflow Diagram */
+.workflow-diagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+  padding: 40px 20px;
+}
+
+.workflow-step {
+  position: relative;
+  text-align: center;
+}
+
+.step-number {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent-color);
+  color: #0f0c29;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  z-index: 10;
+}
+
+.step-content {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 40px 25px 25px;
+  min-width: 180px;
+  transition: all 0.3s ease;
+}
+
+.step-content:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent-color);
+  transform: translateY(-5px);
+}
+
+.step-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.step-content p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 15px;
+}
+
+.step-icon {
+  font-size: 2.5rem;
+  margin-top: 10px;
+}
+
+.workflow-arrow {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.workflow-arrow span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--accent-color);
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.workflow-arrow .arrow {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.reverse-flow {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.reverse-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px 30px;
+  border-radius: 30px;
+  margin-bottom: 15px;
+}
+
+.reverse-arrow .arrow {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.reverse-arrow span {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+/* Git Commands Grid */
+.commands-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.command-section {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 25px;
+}
+
+.command-section .section-title {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+.command-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.command-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  border-left: 3px solid var(--accent-color);
+  transition: all 0.2s ease;
+}
+
+.command-item:hover {
+  background: rgba(0, 0, 0, 0.4);
+  transform: translateX(5px);
+}
+
+.command-item code {
+  font-family: 'JetBrains Mono', monospace;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: block;
+}
+
+.command-item span {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Closing Slide for Module 3 */
+.closing-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.resource-link {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 15px 30px;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.resource-link:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #0f0c29;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(61, 220, 132, 0.3);
+}
+
+/* Responsive Design for Module 3 */
+@media (max-width: 1200px) {
+
+  .importance-grid,
+  .vcs-comparison,
+  .git-features-grid,
+  .github-features-grid,
+  .platform-comparison-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .workflow-diagram {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .importance-grid,
+  .vcs-comparison,
+  .git-features-grid,
+  .github-features-grid,
+  .platform-comparison-grid,
+  .commands-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-container {
+    flex-direction: column;
+  }
+
+  .version-arrow {
+    transform: rotate(90deg);
+  }
+
+  .workflow-diagram {
+    flex-direction: column;
+  }
+
+  .workflow-arrow .arrow {
+    transform: rotate(90deg);
+  }
+}

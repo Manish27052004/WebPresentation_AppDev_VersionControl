@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 3: Version Control (Git & GitHub)</title>
+    <!-- Prevent FOUC -->
+    <style>
+        body {
+            opacity: 0;
+            background: #0f0c29;
+            transition: opacity 0.4s ease;
+        }
+
+        body.reveal-ready {
+            opacity: 1;
+        }
+    </style>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Back to Modules Button -->
+    <a href="index.html" class="back-to-modules">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7" />
+        </svg>
+        Back to Modules
+    </a>
+
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- SLIDE 1: Opening - Version Control -->
+            <section data-state="hero-state" class="slide-opening">
+                <div class="background-gradient"></div>
+                <div class="floating-grid"></div>
+
+                <div class="content-wrapper">
+                    <p class="module-title">Module 3</p>
+                    <h1 class="main-title">Version Control<br><span class="highlight-year">Git & GitHub</span></h1>
+
+                    <div class="typewriter-container">
+                        <p class="typewriter-text">Collaborate. Track. Deploy.</p>
+                    </div>
+
+                    <div class="floating-elements">
+                        <div class="icon-3d phone-mockup">📦</div>
+                        <div class="icon-3d code-brackets">🔀</div>
+                        <div class="icon-3d cloud-icon">🌿</div>
+                    </div>
+                </div>
+
+                <aside class="notes">
+                    Version control is the foundation of modern software development.
+                    It enables multiple developers to work on the same codebase without conflicts,
+                    track every change, and roll back to previous versions when needed.
+                </aside>
+            </section>
+
+            <!-- SLIDE 2: What is Version Control? -->
+            <section class="slide-definition">
+                <h2>What is Version Control?</h2>
+                <p class="definition-text">A system that records changes to files over time so you can recall specific
+                    versions later.
+                </p>
+
+                <div class="vc-visual fragment fade-up">
+                    <div class="timeline-container">
+                        <div class="version-point">
+                            <div class="version-dot v1">📄</div>
+                            <span>Version 1.0</span>
+                            <p>Initial Code</p>
+                        </div>
+                        <div class="version-arrow">→</div>
+                        <div class="version-point">
+                            <div class="version-dot v2">✏️</div>
+                            <span>Version 1.1</span>
+                            <p>Bug Fix</p>
+                        </div>
+                        <div class="version-arrow">→</div>
+                        <div class="version-point">
+                            <div class="version-dot v3">✨</div>
+                            <span>Version 2.0</span>
+                            <p>New Feature</p>
+                        </div>
+                        <div class="version-arrow">→</div>
+                        <div class="version-point">
+                            <div class="version-dot v4">🚀</div>
+                            <span>Version 3.0</span>
+                            <p>Production Ready</p>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="notes">
+                    Version control allows you to track changes, revert to previous states, and collaborate effectively.
+                    Every change is recorded with who made it, when, and why.
+                </aside>
+            </section>
+
+            <!-- SLIDE 3: Why Version Control is Important -->
+            <section class="slide-importance">
+                <h2>Why Version Control is Important</h2>
+
+                <div class="importance-grid">
+                    <div class="importance-card fragment fade-up">
+                        <div class="importance-icon">🔄</div>
+                        <h3>Track Changes</h3>
+                        <p>Complete history of every modification</p>
+                    </div>
+
+                    <div class="importance-card fragment fade-up">
+                        <div class="importance-icon">👥</div>
+                        <h3>Collaboration</h3>
+                        <p>Multiple developers work simultaneously</p>
+                    </div>
+
+                    <div class="importance-card fragment fade-up">
+                        <div class="importance-icon">⏪</div>
+                        <h3>Revert Changes</h3>
+                        <p>Roll back to any previous version</p>
+                    </div>
+
+                    <div class="importance-card fragment fade-up">
+                        <div class="importance-icon">🌿</div>
+                        <h3>Branching</h3>
+                        <p>Experiment without breaking main code</p>
+                    </div>
+
+                    <div class="importance-card fragment fade-up">
+                        <div class="importance-icon">🔍</div>
+                        <h3>Code Review</h3>
+                        <p>Review and approve changes before merging</p>
+                    </div>
+
+                    <div class="importance-card fragment fade-up">
+                        <div class="importance-icon">🚀</div>
+                        <h3>CI/CD Integration</h3>
+                        <p>Automated testing and deployment</p>
+                    </div>
+                </div>
+
+                <aside class="notes">
+                    Version control is essential for modern development. It enables collaboration,
+                    provides safety through backups, and integrates with CI/CD pipelines.
+                </aside>
+            </section>
+
+            <!-- SLIDE 4: Types of Version Control Systems -->
+            <section class="slide-vcs-types">
+                <h2>Types of Version Control Systems</h2>
+
+                <div class="vcs-comparison">
+                    <!-- Local VCS -->
+                    <div class="vcs-type fragment fade-up">
+                        <div class="vcs-header local-vcs">
+                            <div class="vcs-icon">💾</div>
+                            <h3>Local VCS</h3>
+                        </div>
+                        <div class="vcs-diagram">
+                            <div class="vcs-box">
+                                <span>💻 Local Computer</span>
+                                <div class="local-db">Version Database</div>
+                            </div>
+                        </div>
+                        <div class="vcs-description">
+                            <p><strong>Example:</strong> RCS</p>
+                            <p>Simple but limited - no collaboration</p>
+                        </div>
+                    </div>
+
+                    <!-- Centralized VCS -->
+                    <div class="vcs-type fragment fade-up">
+                        <div class="vcs-header centralized-vcs">
+                            <div class="vcs-icon">🖥️</div>
+                            <h3>Centralized VCS</h3>
+                        </div>
+                        <div class="vcs-diagram">
+                            <div class="vcs-box server">
+                                <span>🏢 Central Server</span>
+                            </div>
+                            <div class="vcs-clients">
+                                <div class="client">💻 Client 1</div>
+                                <div class="client">💻 Client 2</div>
+                                <div class="client">💻 Client 3</div>
+                            </div>
+                        </div>
+                        <div class="vcs-description">
+                            <p><strong>Example:</strong> SVN, CVS</p>
+                            <p>Single point of failure</p>
+                        </div>
+                    </div>
+
+                    <!-- Distributed VCS -->
+                    <div class="vcs-type fragment fade-up active-vcs">
+                        <div class="vcs-header distributed-vcs">
+                            <div class="vcs-icon">🌐</div>
+                            <h3>Distributed VCS</h3>
+                        </div>
+                        <div class="vcs-diagram">
+                            <div class="vcs-box server">
+                                <span>☁️ Remote Repository</span>
+                            </div>
+                            <div class="vcs-clients distributed">
+                                <div class="client full">
+                                    <span>💻 Local Repo 1</span>
+                                    <small>Full History</small>
+                                </div>
+                                <div class="client full">
+                                    <span>💻 Local Repo 2</span>
+                                    <small>Full History</small>
+                                </div>
+                                <div class="client full">
+                                    <span>💻 Local Repo 3</span>
+                                    <small>Full History</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vcs-description">
+                            <p><strong>Example:</strong> Git, Mercurial</p>
+                            <p class="highlight-text">✅ Modern Standard</p>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="notes">
+                    There are three main types of version control systems:
+                    1. Local VCS - simple database on local machine
+                    2. Centralized VCS - single server with all versions
+                    3. Distributed VCS - every developer has full repository history
+                </aside>
+            </section>
+
+            <!-- SLIDE 5: Introduction to Git -->
+            <section class="slide-git-intro">
+                <div class="header-row center-header">
+                    <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git"
+                        class="header-logo git-logo-glow">
+                    <h2>Git - The Version Control System</h2>
+                </div>
+
+                <div class="git-features-grid">
+                    <div class="git-feature fragment fade-up">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Fast & Efficient</h3>
+                        <p>Optimized for speed and performance</p>
+                    </div>
+
+                    <div class="git-feature fragment fade-up">
+                        <div class="feature-icon">🌿</div>
+                        <h3>Branching & Merging</h3>
+                        <p>Lightweight branches for parallel development</p>
+                    </div>
+
+                    <div class="git-feature fragment fade-up">
+                        <div class="feature-icon">📦</div>
+                        <h3>Distributed</h3>
+                        <p>Full repository on every developer's machine</p>
+                    </div>
+
+                    <div class="git-feature fragment fade-up">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Data Integrity</h3>
+                        <p>Cryptographic hash ensures data safety</p>
+                    </div>
+
+                    <div class="git-feature fragment fade-up">
+                        <div class="feature-icon">🆓</div>
+                        <h3>Free & Open Source</h3>
+                        <p>MIT License, used by millions worldwide</p>
+                    </div>
+
+                    <div class="git-feature fragment fade-up">
+                        <div class="feature-icon">🏢</div>
+                        <h3>Industry Standard</h3>
+                        <p>Used by Google, Microsoft, Meta, and more</p>
+                    </div>
+                </div>
+
+                <aside class="notes">
+                    Git is the most popular version control system. Created by Linus Torvalds in 2005,
+                    it's now the industry standard for software development.
+                </aside>
+            </section>
+
+            <!-- SLIDE 6: Introduction to GitHub -->
+            <section class="slide-github-intro">
+                <div class="header-row center-header">
+                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"
+                        class="header-logo github-logo-glow">
+                    <h2>GitHub - Where the World Builds Software</h2>
+                </div>
+
+                <div class="github-description fragment fade-up">
+                    <p class="github-tagline">Cloud-based hosting service for Git repositories</p>
+                </div>
+
+                <div class="github-features-grid">
+                    <div class="github-feature fragment fade-up">
+                        <div class="feature-icon">📁</div>
+                        <h3>Repository Hosting</h3>
+                        <p>Store and manage Git repositories online</p>
+                    </div>
+
+                    <div class="github-feature fragment fade-up">
+                        <div class="feature-icon">👥</div>
+                        <h3>Collaboration Tools</h3>
+                        <p>Pull requests, code reviews, discussions</p>
+                    </div>
+
+                    <div class="github-feature fragment fade-up">
+                        <div class="feature-icon">🔧</div>
+                        <h3>Project Management</h3>
+                        <p>Issues, projects, milestones</p>
+                    </div>
+
+                    <div class="github-feature fragment fade-up">
+                        <div class="feature-icon">🤖</div>
+                        <h3>GitHub Actions</h3>
+                        <p>CI/CD automation workflows</p>
+                    </div>
+
+                    <div class="github-feature fragment fade-up">
+                        <div class="feature-icon">🌐</div>
+                        <h3>GitHub Pages</h3>
+                        <p>Free static website hosting</p>
+                    </div>
+
+                    <div class="github-feature fragment fade-up">
+                        <div class="feature-icon">🔐</div>
+                        <h3>Security Features</h3>
+                        <p>Dependabot, security advisories, secrets</p>
+                    </div>
+                </div>
+
+                <p class="github-stats fragment fade-up">
+                    <strong>100M+ Developers</strong> • <strong>420M+ Repositories</strong> • <strong>Owned by
+                        Microsoft</strong>
+                </p>
+
+                <aside class="notes">
+                    GitHub is the world's largest code hosting platform. It provides Git repository hosting
+                    plus collaboration features, project management, CI/CD, and more.
+                </aside>
+            </section>
+
+            <!-- SLIDE 7: Why GitHub Over Others? -->
+            <section class="slide-github-comparison">
+                <h2>Why Choose GitHub?</h2>
+
+                <div class="platform-comparison-grid">
+                    <!-- GitHub -->
+                    <div class="platform-card github-card fragment fade-up">
+                        <div class="platform-header">
+                            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                                alt="GitHub" class="platform-logo">
+                            <h3>GitHub</h3>
+                        </div>
+                        <div class="platform-badges">
+                            <span class="badge-pro">👑 Most Popular</span>
+                            <span class="badge-pro">🔥 100M+ Users</span>
+                        </div>
+                        <div class="platform-features">
+                            <div class="feature-item">✅ Largest community</div>
+                            <div class="feature-item">✅ GitHub Actions (CI/CD)</div>
+                            <div class="feature-item">✅ GitHub Pages (free hosting)</div>
+                            <div class="feature-item">✅ GitHub Copilot (AI assistant)</div>
+                            <div class="feature-item">✅ Best for open source</div>
+                            <div class="feature-item">✅ Industry standard</div>
+                        </div>
+                    </div>
+
+                    <!-- GitLab -->
+                    <div class="platform-card gitlab-card fragment fade-up">
+                        <div class="platform-header">
+                            <img src="https://about.gitlab.com/images/press/logo/png/gitlab-icon-rgb.png" alt="GitLab"
+                                class="platform-logo">
+                            <h3>GitLab</h3>
+                        </div>
+                        <div class="platform-badges">
+                            <span class="badge-alt">🔧 DevOps Focused</span>
+                        </div>
+                        <div class="platform-features">
+                            <div class="feature-item">✅ Built-in CI/CD</div>
+                            <div class="feature-item">✅ Self-hosted option</div>
+                            <div class="feature-item">✅ DevOps all-in-one</div>
+                            <div class="feature-item">❌ Smaller community</div>
+                        </div>
+                    </div>
+
+                    <!-- Bitbucket -->
+                    <div class="platform-card bitbucket-card fragment fade-up">
+                        <div class="platform-header">
+                            <img src="https://cdn.worldvectorlogo.com/logos/bitbucket-icon.svg" alt="Bitbucket"
+                                class="platform-logo">
+                            <h3>Bitbucket</h3>
+                        </div>
+                        <div class="platform-badges">
+                            <span class="badge-alt">🏢 Atlassian Suite</span>
+                        </div>
+                        <div class="platform-features">
+                            <div class="feature-item">✅ Jira integration</div>
+                            <div class="feature-item">✅ Free private repos</div>
+                            <div class="feature-item">✅ Atlassian ecosystem</div>
+                            <div class="feature-item">❌ Smaller ecosystem</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="winner-banner fragment fade-up">
+                    <h3>🏆 GitHub is the Industry Standard</h3>
+                    <p>Most companies, open-source projects, and developers use GitHub</p>
+                </div>
+
+                <aside class="notes">
+                    GitHub is the most popular platform due to its massive community, extensive features,
+                    and industry adoption. GitLab is great for DevOps, and Bitbucket integrates well with Atlassian
+                    tools.
+                </aside>
+            </section>
+
+            <!-- SLIDE 8: Basic Git Workflow -->
+            <section class="slide-git-workflow">
+                <h2>Basic Git Workflow</h2>
+
+                <div class="workflow-diagram fragment fade-up">
+                    <div class="workflow-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Working Directory</h3>
+                            <p>Your local files and folders</p>
+                            <div class="step-icon">📁</div>
+                        </div>
+                    </div>
+
+                    <div class="workflow-arrow">
+                        <span>git add</span>
+                        <div class="arrow">→</div>
+                    </div>
+
+                    <div class="workflow-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Staging Area</h3>
+                            <p>Files ready to be committed</p>
+                            <div class="step-icon">📋</div>
+                        </div>
+                    </div>
+
+                    <div class="workflow-arrow">
+                        <span>git commit</span>
+                        <div class="arrow">→</div>
+                    </div>
+
+                    <div class="workflow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Local Repository</h3>
+                            <p>Version history on your machine</p>
+                            <div class="step-icon">💾</div>
+                        </div>
+                    </div>
+
+                    <div class="workflow-arrow">
+                        <span>git push</span>
+                        <div class="arrow">→</div>
+                    </div>
+
+                    <div class="workflow-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Remote Repository</h3>
+                            <p>GitHub / GitLab / Cloud</p>
+                            <div class="step-icon">☁️</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reverse-flow fragment fade-up">
+                    <div class="reverse-arrow">
+                        <div class="arrow">←</div>
+                        <span>git pull / git clone</span>
+                    </div>
+                    <p>Sync changes from remote to local</p>
+                </div>
+
+                <aside class="notes">
+                    The Git workflow has four stages:
+                    1. Working Directory - where you edit files
+                    2. Staging Area - where you prepare files for commit
+                    3. Local Repository - your local Git history
+                    4. Remote Repository - cloud-hosted repository (GitHub)
+                </aside>
+            </section>
+
+            <!-- SLIDE 9: Common Git Commands -->
+            <section class="slide-git-commands">
+                <h2>Essential Git Commands</h2>
+
+                <div class="commands-grid">
+                    <!-- Setup & Config -->
+                    <div class="command-section fragment fade-up">
+                        <h3 class="section-title">⚙️ Setup & Config</h3>
+                        <div class="command-list">
+                            <div class="command-item">
+                                <code>git config --global user.name "Your Name"</code>
+                                <span>Set your name</span>
+                            </div>
+                            <div class="command-item">
+                                <code>git config --global user.email "email@example.com"</code>
+                                <span>Set your email</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Getting & Creating -->
+                    <div class="command-section fragment fade-up">
+                        <h3 class="section-title">📥 Getting & Creating</h3>
+                        <div class="command-list">
+                            <div class="command-item">
+                                <code>git init</code>
+                                <span>Initialize a new repository</span>
+                            </div>
+                            <div class="command-item">
+                                <code>git clone &lt;url&gt;</code>
+                                <span>Clone a remote repository</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Basic Snapshotting -->
+                    <div class="command-section fragment fade-up">
+                        <h3 class="section-title">📸 Basic Snapshotting</h3>
+                        <div class="command-list">
+                            <div class="command-item">
+                                <code>git status</code>
+                                <span>Check repository status</span>
+                            </div>
+                            <div class="command-item">
+                                <code>git add &lt;file&gt;</code>
+                                <span>Add file to staging</span>
+                            </div>
+                            <div class="command-item">
+                                <code>git add .</code>
+                                <span>Add all changes</span>
+                            </div>
+                            <div class="command-item">
+                                <code>git commit -m "message"</code>
+                                <span>Commit staged changes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Branching & Merging -->
+                    <div class="command-section fragment fade-up">
+                        <h3 class="section-title">🌿 Branching & Merging</h3>
+                        <div class="command-list">
+                            <div class="command-item">
+                                <code>git branch</code>
+                                <span>List all branches</span>
+                            </div>
+                            <div class="command-item">
+                                <code>git branch &lt;name&gt;</code>
+                                <span>Create new branch</span>
+                            </div>
+                            <div class="command-item">
+                                <code>git checkout &lt;branch&gt;</code>
+                                <span>Switch to branch</span>
+                            </div>
+                            <div class="command-item">
+                                <code>git merge &lt;branch&gt;</code>
+                                <span>Merge branch into current</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sharing & Updating -->
+                    <div class="command-section fragment fade-up">
+                        <h3 class="section-title">🔄 Sharing & Updating</h3>
+                        <div class="command-list">
+                            <div class="command-item">
+                                <code>git push origin &lt;branch&gt;</code>
+                                <span>Push to remote repository</span>
+                            </div>
+                            <div class="command-item">
+                                <code>git pull</code>
+                                <span>Fetch and merge from remote</span>
+                            </div>
+                            <div class="command-item">
+                                <code>git remote add origin &lt;url&gt;</code>
+                                <span>Add remote repository</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Inspection & Comparison -->
+                    <div class="command-section fragment fade-up">
+                        <h3 class="section-title">🔍 Inspection</h3>
+                        <div class="command-list">
+                            <div class="command-item">
+                                <code>git log</code>
+                                <span>View commit history</span>
+                            </div>
+                            <div class="command-item">
+                                <code>git diff</code>
+                                <span>Show changes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="notes">
+                    These are the most essential Git commands every developer should know.
+                    Master these, and you'll be able to handle most Git workflows effectively.
+                </aside>
+            </section>
+
+            <!-- FINAL SLIDE -->
+            <section class="slide-closing" data-state="closing-state">
+                <h1 class="closing-title">Master Git & GitHub</h1>
+                <h2 class="fragment fade-up">The Foundation of Modern Development</h2>
+
+                <div class="closing-actions fragment fade-up">
+                    <p>⚡ Practice daily with real projects</p>
+                    <p>🌿 Master branching and merging</p>
+                    <p>👥 Collaborate on open source</p>
+                    <p>🚀 Build your GitHub portfolio</p>
+                </div>
+
+                <div class="closing-links fragment fade-up">
+                    <a href="https://git-scm.com/doc" target="_blank" class="resource-link">📚 Git Documentation</a>
+                    <a href="https://docs.github.com" target="_blank" class="resource-link">📘 GitHub Docs</a>
+                    <a href="https://learngitbranching.js.org" target="_blank" class="resource-link">🎮 Interactive Git
+                        Tutorial</a>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
